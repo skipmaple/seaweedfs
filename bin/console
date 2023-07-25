@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "seaweedfs"
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+client = Seaweedfs::Client.new(endpoint: ENV["SEAWEEDFS_ENDPOINT"])
+
+puts
+puts "We've created a 'client' variable as a Seaweedfs::Client using ENV['SEAWEEDFS_ENDPOINT'] as the API endpoint."
+puts
+
+require "irb"
+IRB.start(__FILE__)
